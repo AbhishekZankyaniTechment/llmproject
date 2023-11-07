@@ -60,7 +60,7 @@ def main():
                 VectorStore = pickle.load(f)
             # st.write('Embeddings Loaded from the Disk')s
         else:
-            embeddings = OpenAIEmbeddings()
+            embeddings = "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"
             VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
             with open(f"{store_name}.pkl", "wb") as f:
                 pickle.dump(VectorStore, f)
